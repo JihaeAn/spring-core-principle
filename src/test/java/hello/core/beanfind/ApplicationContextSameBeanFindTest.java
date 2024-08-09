@@ -1,8 +1,6 @@
 package hello.core.beanfind;
 
-import hello.core.AppConfig;
 import hello.core.member.MemberRepository;
-import hello.core.member.MemberService;
 import hello.core.member.MemoryMemberRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -17,6 +15,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ApplicationContextSameBeanFindTest {
+    /**
+     * 실무에서는 AnnotationConfigApplicationContext에서 Bean을 꺼내어 사용하는 경우가 거의 없다.
+     */
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SameBeanConfig.class);
 
     @Test

@@ -15,6 +15,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
+    // 나는 의존성 주입 시 순서가 상관이 있을 거라고 생각했는데, Spring의 프록시 및 싱글톤 관리 메커니즘 덕분에 순서는 상관이 없다고 한다.
+
     @Bean
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository());
